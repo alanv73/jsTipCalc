@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Tip Calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container w-50 mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4 mt-0">Tip Calculator</h1>
+            <hr class="my-4">
+            <div class="form-group">
+                <label for="subtotal">Bill Total</label>
+                <input min="0.01" step="0.01" value="0.00" type="number" class="form-control" id="subtotal"
+                    aria-describedby="emailHelp">
+                <label class="mt-3" for="rating">Rate Your Service</label class="mt-2">
+                <select class="form-control" id="rating">
+                    <option value="0.05">Poor</option>
+                    <option value="0.10">Fair</option value="0.5">
+                    <option value="0.15" selected>Good</option value="0.5">
+                    <option value="0.20">Excellent</option value="0.5">
+                    <option value="0.25">Outstanding</option value="0.5">
+                </select>
+                <label class="mt-3" for="people">Number of people in party: <span class="font-weight-bold" id="party-output">1</span></label class="mt-2">
+                <input min="1" max="10" value="1" step="1" type="range" class="form-control" id="people">
+            </div>
+            <button class="btn btn-primary" id="calculate">Calculate</button>
+            <div class="d-none" id="output">
+                <hr class="my-4">
+                <h3>Total Bill plus Tip - <span id="grand-total"></span></h3 class="display-4">
+                <div class="d-none" id="split">
+                    <h3>Split <span id="diners">4</span> ways - <span id="split-total"></span> each</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="tip-calc.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
